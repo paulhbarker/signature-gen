@@ -1,0 +1,19 @@
+{
+  "name": "email_signatures",
+  "version": "1.0.0",
+  "description": "Email signature development",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "node generate"
+  },
+  "author": "Paul Barker",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "colors": "^1.1.2",
+    "gulp": "^3.9.1",
+    "html-minifier": "^3.5.2",
+    "mustache": "^2.3.0",
+    "to-snake-case": "^1.0.0"
+  }
+}
