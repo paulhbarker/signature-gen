@@ -4,8 +4,8 @@ var reload = browserSync.reload;
 
 gulp.task('default', ['serve']);
 
-var folder = 'realtyflux';
-var filename = 'index.html';
+var folder = 'cbtnuggets';
+var filename = 'template.html';
 var input = {};
 
 gulp.task('serve', function () {
@@ -13,5 +13,4 @@ gulp.task('serve', function () {
 		server: './' + folder
 	});
 	gulp.watch('./' + folder + '/*.html').on('change', reload);
-	gulp.watch('./' + folder + '/*.css').on('change', reload);
 });

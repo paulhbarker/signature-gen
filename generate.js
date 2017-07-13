@@ -1,5 +1,5 @@
 /**
- * Email signature generator for Marshall Stearns, Luxe Industries, and RealtyFlux.
+ * Email signature generator for Marshall Stearns, Luxe Industries, RealtyFlux.
  * Edit template folder and destination, then run `node generate` or `npm start`.
  */
 const colors = require('colors');
@@ -13,18 +13,18 @@ const snake = require('to-snake-case');
  * Specify template folder location
  * and output file destination
  */
-let folder = 'realtyflux';
-const dest = 'C:/paul/email_signatures/' + folder;
+let folder = 'cbtnuggets';
+const dest = path.join(__dirname, folder);
 
-const template = path.join(__dirname, folder, 'template.html');
+const template = path.join(__dirname, folder, 'index.html');
 const employee = {};
 const answers = [];
 
 const prompts = [
-	'Employee\'s full name:',
-	'Employee\'s title:',
-	'Employee\'s email:',
-	'Employee\'s phone:',
+	'Full Name:',
+	'Title:',
+	'Email:',
+	'Phone:',
 ];
 
 const minifyOptions = {
@@ -69,5 +69,7 @@ process.stdin.on('data', (data) => {
 		});
 	}
 });
+
+console.log('Please provide employee information.');
 
 ask(0);
